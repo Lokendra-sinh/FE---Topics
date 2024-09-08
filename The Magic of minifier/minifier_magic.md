@@ -2,7 +2,7 @@ This whole series we are going to talk a lot about "Modern Build Tools" & why th
 
 To begin, let's start with a simple "Counter" project. Since we're not using any package manager (NPM | YARN | ...) or build tools, we need to import the functionality of react via CDNs. We've also imported the babel script...why? Because...if not, then how would you transform the "JSX" to "JS" becuase browsers haven't catch up with the rapid frameworks updates and culture...meaning they can't render JSX. JS - is the only langauge they understand...currently!
 
-'''
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +38,7 @@ To begin, let's start with a simple "Counter" project. Since we're not using any
     </script>
   </body>
 </html>
-'''
+```
 
 
 Run this index.html file via live server in vscode and you'll be able to see below screen. You can play with the counter.
@@ -46,7 +46,7 @@ Run this index.html file via live server in vscode and you'll be able to see bel
 
 Now our goal is to find out the size of our main code. To do that, lets add another script which will help us console log the size of the counter application.
 
-'''
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -84,7 +84,7 @@ Now our goal is to find out the size of our main code. To do that, lets add anot
     </script>
   </body>
 </html>
-'''
+```
 
 Run this and you'll be able to see the size as "355" bytes in chrome's console. That's the original size of our counter component which is totally fine but if you look closely and if you're someone who's crazy with optimizations, you might have already spotted the area.
 
@@ -100,7 +100,7 @@ If we could somehow remove above things, we might be able to save some space rig
 
 Let's add terser (minification tool) to our little experiment and calculate the size again. 
 
-'''
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -141,7 +141,7 @@ Let's add terser (minification tool) to our little experiment and calculate the 
     </script>
   </body>
 </html>
-'''
+```
 
 Size after adding terser:
 ![alt text](image-3.png)
